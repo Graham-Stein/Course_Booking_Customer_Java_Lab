@@ -28,20 +28,20 @@ public class CourseBookingCustomerApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void canGetACustomer()
-	{
-		Customer customer = new Customer("Nathan", "Belfast", 10);
-
-		Course course = new Course("Jutjistu killer", "Belfast", 5);
-
-		Booking booking = new Booking("17-01-2019", customer, course);
-
-		customerRepository.save(customer);
-		courseRepository.save(course);
-		bookingRepository.save(booking);
-
-
-	}
+//	@Test
+//	public void canGetACustomer()
+//	{
+//		Customer customer = new Customer("Nathan", "Belfast", 10);
+//
+//		Course course = new Course("Jutjistu killer", "Belfast", 5);
+//
+//		Booking booking = new Booking("17-01-2019", customer, course);
+//
+//		customerRepository.save(customer);
+//		courseRepository.save(course);
+//		bookingRepository.save(booking);
+//
+//
+//	}
 
 }
