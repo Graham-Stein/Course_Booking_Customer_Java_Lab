@@ -7,4 +7,5 @@ import java.util.List;
 public interface CourseRepositoryCustom {
 
     List<Course> findAllCoursesByRating(int rating);
+    List<Course> findAllCoursesForGivenCustomer(Long customerId);
 }

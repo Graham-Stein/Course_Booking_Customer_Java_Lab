@@ -31,8 +31,18 @@ public class CourseRepositoryImpl implements CourseRepositoryCustom {
 
 //    Get all courses for a given customer
 
-//    @Transactional
-//    public List<Course> findAllCoursesForGivenCustomer(Long customerId){
-//
-//    }
+    @Transactional
+    public List<Course> findAllCoursesForGivenCustomer(Long customerId){
+
+        List<Course> results = null;
+
+        Session session = entityManager.unwrap(Session.class);
+        Criteria cr = session.createCriteria(Course.class);
+        cr.createAlias("bookings", "booking");
+        cr.add(Restrictions.eq("booking.customer.id", customerId));
+        results = cr.list();
+
+        return results;
+
+    }
 }
