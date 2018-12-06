@@ -67,4 +67,10 @@ public class CourseBookingCustomerApplicationTests {
 		List<Course> results = courseRepository.findAllCoursesForGivenCustomer(2L);
 		assertEquals(1, results.size());
 	}
+
+	@Test
+	public void canfindAllBookingsForDate(){
+		List<Booking> results = bookingRepository.findAllBookingsForDate("19-04-2019");
+		assertEquals(1, results.size());
+		}
 }
