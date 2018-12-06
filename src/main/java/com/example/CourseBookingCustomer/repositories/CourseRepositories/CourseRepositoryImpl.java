@@ -29,4 +29,10 @@ public class CourseRepositoryImpl implements CourseRepositoryCustom {
         return result;
     }
 
+//    Get all courses for a given customer
+
+//    @Transactional
+//    public List<Course> findAllCoursesForGivenCustomer(Long customerId){
+//
+//    }
 }

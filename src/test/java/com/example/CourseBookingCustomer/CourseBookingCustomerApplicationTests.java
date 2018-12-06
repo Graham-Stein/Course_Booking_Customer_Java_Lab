@@ -55,4 +55,10 @@ public class CourseBookingCustomerApplicationTests {
 		assertEquals(1, results.size());
 	}
 
+	@Test
+	public void canGetAllCustomersOnGivenCourse(){
+		List<Customer> results = customerRepository.findAllCustomersOnCourse(2L);
+		assertEquals(1, results.size());
+	}
+
 }
