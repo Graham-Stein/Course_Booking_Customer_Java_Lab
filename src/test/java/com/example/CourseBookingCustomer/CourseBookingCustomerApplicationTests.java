@@ -12,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CourseBookingCustomerApplicationTests {
@@ -43,5 +47,12 @@ public class CourseBookingCustomerApplicationTests {
 //
 //
 //	}
+
+	@Test
+	public void canGetAllCoursesByRating()
+	{
+		List<Course> results = courseRepository.findAllCoursesByRating(5);
+		assertEquals(1, results.size());
+	}
 
 }
